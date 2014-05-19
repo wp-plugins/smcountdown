@@ -5,7 +5,7 @@
  */
 /*
   Plugin Name: SM CountDown Widget
-  Plugin URI: http://wordpress.org/plugins/smcountdown-widget
+  Plugin URI: http://wordpress.org/plugins/smcountdown
   Description: Displays a responsive JQuery countdown timer.
   Version: 1.0
   Author: Stéphane Moitry
