@@ -1,0 +1,87 @@
+.smcountdownblock {
+    width:100%;
+    margin:0 auto;
+    position:relative;
+    z-index: 1;
+    padding: 36px 0;
+}
+
+.smcountdownblock:before,
+.smcountdownblock:after {
+    content: " ";
+    display: table;
+}
+
+.smcountdownblock:after {
+    clear: both;
+}
+
+.smcountdownelement {
+    float: left;
+    width: 23%;
+    margin: 0 1%;
+	  text-align: center;
+	  border-radius: 4px;
+	  background: #000 url(timer-bg.png) top repeat-x;
+	  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0px 1px 0px rgba(0, 0, 0, 0.8), 0px 2px 0px rgba(255, 255, 255, 0.3),
+		  0px 3px 0px rgba(0, 0, 0, 0.8), 0px 4px 0px rgba(255, 255, 255, 0.3), 0px 5px 0px rgba(0, 0, 0, 0.8), 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.smcountdownelement:nth-of-type(4n+1) {
+    clear: left;
+}
+
+.smcountdownelement .number {
+    display: block;
+    /*padding: 40px 30px;*/
+    font-size: 60px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    border-bottom: 1px solid #000;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.smcountdownelement .label {
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    line-height: 1em;
+    color: #777;
+    border-top: 1px solid #363844;
+}
+
+@media only screen and (max-width: 767px) {
+    .smcountdownblock {
+        max-width:375px;
+    }
+    .smcountdownelement {
+        width: 48%;
+        margin: 2% 1%;
+    }
+    .smcountdownelement:nth-of-type(4n+1) {
+        clear: none;
+    }
+    .smcountdownelement:nth-of-type(2n+1) {
+        clear: left;
+    }
+    .smcountdownelement .number {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 399px) {
+    .smcountdownblock {
+        max-width:180px;
+    }
+    .smcountdownelement {
+        width: 98%;
+        margin: 4% 1%;
+    }
+    .smcountdownelement:nth-of-type(2n+1) {
+        clear: none;
+    }
+    .smcountdownelement .number {
+        font-size: 30px;
+    }
+}
