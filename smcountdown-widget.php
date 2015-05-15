@@ -1,13 +1,13 @@
 <?php
 /**
  * @package SMCountDown_widget
- * @version 1.1
+ * @version 1.2
  */
 /*
   Plugin Name: SM CountDown Widget
   Plugin URI: http://wordpress.org/plugins/smcountdown-widget
   Description: Displays a responsive JQuery countdown timer.
-  Version: 1.1
+  Version: 1.2
   Author: Stéphane Moitry
   Author URI: http://stephane.moitry.fr
   License: GPLv2 or later
@@ -94,14 +94,14 @@ class smcountdown_widget_Widget extends WP_Widget {
 	/** @see WP_Widget::form */
 	function form($instance) {
 		$title = '';
-		$timerdate = '2015-12-31 23:59:59';
+		$timerdate = '2015/12/31 23:59:59';
 
 		if (isset($instance['title'])) {
 			$title = esc_attr($instance['title']);
 		}
 		
 		if (isset($instance['timerdate'])) {
-			$imgtype = esc_attr($instance['timerdate']);
+			$timerdate = esc_attr($instance['timerdate']);
 		}
 ?>
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:','smcountdown-widget'); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
@@ -114,7 +114,7 @@ class smcountdown_widget_Widget extends WP_Widget {
 /* ShortCode Handler */
 function smcountdown_widget_shortcode( $atts ) {
 	$attributes = shortcode_atts( array(
-	    'timerdate' => '2015-12-31 23:59:59'
+	    'timerdate' => '2015/12/31 23:59:59'
 	), $atts );
 	
 	$text = "<div class='widget_smcountdown_widget'>".smcountdown_widget_Widget::render($attributes['timerdate'])."</div>";

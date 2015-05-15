@@ -3,7 +3,7 @@ Contributors: sierramike
 Tags: timer, countdown, launch, widget
 Requires at least: 3.0
 Tested up to: 4.2.2
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,10 @@ Displays a countdown timer until Decembre 31th of 2015, 23h59m59s.
 2. Sample rendering.
 
 == Changelog ==
+
+= 1.2 =
+* Fixed widget sample date using slashes instead of hyphens
+* Fixed widget target date not displaying (always returned to default)
 
 = 1.1 =
 * Typo fix "Minuts" => "Minutes"
