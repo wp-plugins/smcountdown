@@ -2,8 +2,8 @@
 Contributors: sierramike
 Tags: timer, countdown, launch, widget
 Requires at least: 3.0
-Tested up to: 3.9.1
-Stable tag: 1.0
+Tested up to: 4.2.2
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,8 +24,8 @@ The shortcode supports one parameter: timerdate.
 * timerdate indicates the target date until which the timer counts down
 
 Shortcode usage samples :
-[smcountdown timerdate='2014/12/31 23:59:59']
-Displays a countdown timer until Decembre 31th of 2014, 23h59m59s.
+[smcountdown timerdate='2015/12/31 23:59:59']
+Displays a countdown timer until Decembre 31th of 2015, 23h59m59s.
 
 == Installation ==
 
@@ -40,6 +40,10 @@ Displays a countdown timer until Decembre 31th of 2014, 23h59m59s.
 2. Sample rendering.
 
 == Changelog ==
+
+= 1.1 =
+* Typo fix "Minuts" => "Minutes"
+* Tested with WordPress 4.2.2
 
 = 1.0 =
 * Initial release

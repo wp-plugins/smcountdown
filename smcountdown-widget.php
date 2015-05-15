@@ -1,13 +1,13 @@
 <?php
 /**
  * @package SMCountDown_widget
- * @version 1.0
+ * @version 1.1
  */
 /*
   Plugin Name: SM CountDown Widget
   Plugin URI: http://wordpress.org/plugins/smcountdown-widget
   Description: Displays a responsive JQuery countdown timer.
-  Version: 1.0
+  Version: 1.1
   Author: Stéphane Moitry
   Author URI: http://stephane.moitry.fr
   License: GPLv2 or later
@@ -15,7 +15,7 @@
   Domain Path: /languages
  */
 
-/*  Copyright 2014  Stéphane Moitry (stephane.moitry@gmail.com)
+/*  Copyright 2014-2015  Stéphane Moitry (stephane.moitry@gmail.com)
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License, version 2, as
@@ -74,7 +74,7 @@ class smcountdown_widget_Widget extends WP_Widget {
 		$text = $text . '<section class="smcountdownblock" id="smcountdown' . $id . '">';
 		$text = $text . '<div class="smcountdownelement days"><span class="number" id="smcountdowndays' . $id . '">200</span><span class="label">' . __('Days', 'smcountdown-widget') . '</span></div>';
 		$text = $text . '<div class="smcountdownelement hours"><span class="number" id="smcountdownhours' . $id . '">10</span><span class="label">' . __('Hours', 'smcountdown-widget') . '</span></div>';
-		$text = $text . '<div class="smcountdownelement minutes"><span class="number" id="smcountdownminutes' . $id . '">10</span><span class="label">' . __('Minuts', 'smcountdown-widget') . '</span></div>';
+		$text = $text . '<div class="smcountdownelement minutes"><span class="number" id="smcountdownminutes' . $id . '">10</span><span class="label">' . __('Minutes', 'smcountdown-widget') . '</span></div>';
 		$text = $text . '<div class="smcountdownelement seconds"><span class="number" id="smcountdownseconds' . $id . '">10</span><span class="label">' . __('Seconds', 'smcountdown-widget') . '</span></div>';
 		$text = $text . '</section>';
 
@@ -94,7 +94,7 @@ class smcountdown_widget_Widget extends WP_Widget {
 	/** @see WP_Widget::form */
 	function form($instance) {
 		$title = '';
-		$timerdate = '2014-12-31 23:59:59';
+		$timerdate = '2015-12-31 23:59:59';
 
 		if (isset($instance['title'])) {
 			$title = esc_attr($instance['title']);
@@ -114,7 +114,7 @@ class smcountdown_widget_Widget extends WP_Widget {
 /* ShortCode Handler */
 function smcountdown_widget_shortcode( $atts ) {
 	$attributes = shortcode_atts( array(
-	    'timerdate' => '2014-12-31 23:59:59'
+	    'timerdate' => '2015-12-31 23:59:59'
 	), $atts );
 	
 	$text = "<div class='widget_smcountdown_widget'>".smcountdown_widget_Widget::render($attributes['timerdate'])."</div>";
